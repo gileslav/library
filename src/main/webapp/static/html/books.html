@@ -1,0 +1,29 @@
+
+<div class="text-center">
+	<h1>Books</h1>
+
+
+	<table class= "table table-bordered" ng-init="getBooks()">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Books</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="book in books">
+				<td>{{book.id}}</td>
+				<td>{{book.name}}</td>
+				<td>
+					<button class="btn btn-xs btn-danger" ng-click="deleteBook(book.id, $index)">Delete</button>
+					<a class="btn btn-xs btn-default" href="#/books/edit/{{book.id}}">Edit</a>
+				</td>
+			</tr>
+		</tbody>
+	
+	</table>
+	
+	
+	<a href="#/books/add">Add book</a>
+</div>
